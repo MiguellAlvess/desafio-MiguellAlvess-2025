@@ -9,4 +9,10 @@ describe("ValidadorEntradas", () => {
       ErroBrinquedoInvalido
     );
   });
+  test("Deve lançar erro quando animal não existe no repositório", () => {
+    const validador = new ValidadorEntradas(new RepositorioAnimaisEmMemoria());
+    expect(() => validador.validarAnimais(["Lulu"])).toThrow(
+      ErroAnimalInvalido
+    );
+  });
 });
