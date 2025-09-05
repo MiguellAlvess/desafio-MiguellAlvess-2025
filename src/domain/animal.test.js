@@ -7,4 +7,8 @@ describe("Animal", () => {
       animal.mostraTodosFavoritosNaOrdem(["LASER", "RATO", "CAIXA", "BOLA"])
     ).toBe(true);
   });
+  test("Deve retornar true quando contém todos os brinquedos favoritos independentemente da ordem", () => {
+    const animal = new Animal("Loco", "jabuti", ["SKATE", "RATO"]);
+    expect(animal.contemTodosFavoritos(["RATO", "BOLA", "SKATE"])).toBe(true);
+  });
 });
