@@ -12,4 +12,12 @@ describe("RepositorioAnimaisEmMemoria", () => {
     expect(animalRecuperado.especie).toBe("cão");
     expect(animalRecuperado.brinquedosFavoritos).toEqual(["OSSO", "BOLA"]);
   });
+  test("Deve listar todos os nomes válidos dos animais registrados", () => {
+    const repositorio = new RepositorioAnimaisEmMemoria();
+    const nomes = repositorio.nomesValidos();
+    expect(nomes).toContain("Rex");
+    expect(nomes).toContain("Mimi");
+    expect(nomes).toContain("Loco");
+    expect(nomes.length).toBe(7);
+  });
 });
