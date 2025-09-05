@@ -1,4 +1,4 @@
-import { PoliticaAdocao } from "./politica-adocao.js";
+import { PoliticaAdocao } from "./politica-de-adocao.js";
 import { Pessoa } from "./pessoa.js";
 import { Animal } from "./animal.js";
 
