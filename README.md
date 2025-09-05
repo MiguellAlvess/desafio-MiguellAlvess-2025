@@ -82,7 +82,7 @@ Em caso de erro:
 
 ## Exemplos
 
-** Caso válido **
+**Caso válido**
 
 Entrada:
 
