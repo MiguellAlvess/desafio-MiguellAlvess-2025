@@ -10,4 +10,13 @@ describe("PoliticaAdocao", () => {
     const pessoa2 = new Pessoa(2, ["RATO", "BOLA"]);
     expect(politica.destinoPara(animal, pessoa1, pessoa2)).toBe("abrigo");
   });
+  test("Deve exigir companhia para o animal Loco e não exigir ordem dos brinquedos", () => {
+    const politica = new PoliticaAdocao();
+    const loco = new Animal("Loco", "jabuti", ["SKATE", "RATO"]);
+    const pessoa = new Pessoa(1, ["RATO", "SKATE"]);
+    expect(politica.apto(pessoa, loco)).toBe(false);
+    const outro = new Animal("Rex", "cão", ["RATO", "BOLA"]);
+    pessoa.adotar(outro);
+    expect(politica.apto(pessoa, loco)).toBe(true);
+  });
 });
