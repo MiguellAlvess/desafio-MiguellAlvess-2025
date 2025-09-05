@@ -1,0 +1,12 @@
+import { RepositorioAnimaisEmMemoria } from "../../src/infra/repositorio-animais-memoria.js";
+import { ValidadorEntradas } from "./validator-entradas.js";
+import { ErroBrinquedoInvalido } from "./errors/erro-brinquedo-invalido.js";
+
+describe("ValidadorEntradas", () => {
+  test("Deve lançar erro quando brinquedo não está na lista de válidos", () => {
+    const validador = new ValidadorEntradas(new RepositorioAnimaisEmMemoria());
+    expect(() => validador.validarBrinquedos(["SAPATO"])).toThrow(
+      ErroBrinquedoInvalido
+    );
+  });
+});
