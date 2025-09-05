@@ -1,5 +1,5 @@
 import { RepositorioAnimaisEmMemoria } from "../../src/infra/repositorio-animais-memoria.js";
-import { ValidadorEntradas } from "./validator-entradas.js";
+import { ValidadorEntradas } from "./validador-entrada.js";
 import { ErroBrinquedoInvalido } from "./errors/erro-brinquedo-invalido.js";
 import { ErroAnimalInvalido } from "./errors/erro-animal-invalido.js";
 
